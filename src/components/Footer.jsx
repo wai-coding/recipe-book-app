@@ -1,6 +1,10 @@
 function Footer() {
   return (
-    <div>GitHub Repository: https://github.com/wai-coding/recipe-book-app</div>
+    <div className="footer">
+      <small>
+        <a href="https://github.com/wai-coding/recipe-book-app" target="_blank">Follow GitHub Repository</a>
+      </small>
+    </div>
   )
 }
 

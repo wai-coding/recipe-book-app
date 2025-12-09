@@ -1,6 +1,9 @@
 function Sidebar() {
   return (
-    <div>Sidebar (Home & About Page)</div>
+    <div className="sidebar">
+      <a href="#" className="">Home</a>
+      <a href="#" className="">About us</a>
+    </div>
   )
 }
 

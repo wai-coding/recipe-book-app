@@ -1,15 +1,63 @@
 body{
-  background-color: lightsalmon;
+  font-family: "Inter", sans-serif;
   margin: 0;
 }
 
 .navbar{
-  background-color: blue;
-  margin: 0;
+  background-color: #e94b42;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.title {
+  color: white;
 }
 
 .logo{
-  width: 2%;
+  width: 5%;
   height: auto;
   margin: 20px;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  min-height: 700px;
+  padding: 20px 60px;
+  box-shadow: 1px 1px 10px #e94b42;
+}
+
+.sidebar a {
+  text-decoration: none;
+  color: #e94b42;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.home {
+  margin-left: 40px;
+}
+
+
+.footer {
+  background-color: #e94b42;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+
+.footer a {
+  text-decoration: none;
+  color: white;
 }
