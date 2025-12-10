@@ -1,20 +1,20 @@
-import ListItem from "../components/ListItem"
+import ListItem from "../components/ListItem";
 
-function List({recipe, handleDeleteRecipe, getLabels}) {
-  return(
+function List({ recipe, handleDeleteRecipe, getLabels }) {
+  return (
     <>
-      {recipe.map((recipe) => {
+      {recipe.map((item) => {
         return (
-            <ListItem 
-                key={recipe.id}
-                handleDeleteRecipe={handleDeleteRecipe}
-                getLabels={getLabels}
-            />
-        )
-        })}
+          <ListItem
+            key={item.id}
+            recipe={item}
+            handleDeleteRecipe={handleDeleteRecipe}
+            getLabels={getLabels}
+          />
+        );
+      })}
     </>
-  )
-
+  );
 }
 
-export default List
+export default List;

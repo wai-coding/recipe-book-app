@@ -22,13 +22,11 @@ function Home() {
   return (
     <div className="home">
       <h1>Recipes Here:</h1>
-      return (
         <List 
           handleDeleteRecipe={handleDeleteRecipe} 
           recipe={recipe}
           getLabels={getLabels}
         /> 
-      )
     </div>
   )
 }
