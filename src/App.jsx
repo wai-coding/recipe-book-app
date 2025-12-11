@@ -1,19 +1,21 @@
 import './App.css'
 import Navbar from './components/Navbar'
-import Sidebar from './components/Sidebar'
 import Home from './components/Home'
 import Footer from './components/Footer'
+import NotFoundPage from './pages/NotFoundPage'
+import AboutPage from './pages/AboutPage'
+import { Route, Routes } from "react-router-dom"
 
 function App() {
  return (
     <>
         <Navbar />
-
-        <div className="main-container">
-            <Sidebar />
-            <Home />
-        </div>
-        
+        <Routes>
+            <Route path="/" element={<Home />} />   
+            <Route path="/about" element={<AboutPage />} />   
+           
+            <Route path="*" element={<NotFoundPage />} />
+        </Routes>
         <Footer />
 
     </>

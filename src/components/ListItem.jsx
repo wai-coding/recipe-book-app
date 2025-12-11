@@ -15,7 +15,12 @@ function ListItem({ recipe, handleDeleteRecipe, getLabels }) {
           ))}
         </div>
 
-        <button onClick={() => handleDeleteRecipe(recipe.id)}>Delete</button>
+        <button 
+          className="btn-delete"
+          onClick={() => handleDeleteRecipe(recipe.id)}
+        >
+          Delete
+        </button>
       </div>
     </div>
   );

@@ -22,13 +22,14 @@ body{
 
 .main-container {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
 }
 
 .sidebar {
   display: flex;
   flex-direction: column;
   min-height: 700px;
+  width: 200px;
   padding: 20px 60px;
   box-shadow: 1px 1px 10px #e94b42;
 }
@@ -40,8 +41,9 @@ body{
   font-weight: 500;
 }
 
-.home {
-  margin-left: 40px;
+.home,
+.about {
+  display: flex;
 }
 
 .recipe-card {
@@ -68,7 +70,17 @@ body{
   margin-left: 20px;
 }
 
+.recipe-content p {
+  margin: 5px;
+}
 
+.btn-delete {
+   background-color: #e94b42;
+   border: none;
+   border-radius: 5px;
+   color: white;
+   padding: 10px;
+}
 .footer {
   background-color: #e94b42;
   display: flex;
