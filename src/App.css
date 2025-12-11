@@ -19,10 +19,14 @@ body{
   height: auto;
   margin: 20px;
 }
+.layout {
+  display: flex;
+}
 
 .main-container {
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
 }
 
 .sidebar {
@@ -42,7 +46,8 @@ body{
 }
 
 .home,
-.about {
+.about,
+.details {
   display: flex;
 }
 

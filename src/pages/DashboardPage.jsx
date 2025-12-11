@@ -1,6 +1,11 @@
-function DashboardPage() {
+import List from "../components/List";
+
+function DashboardPage({ recipe, setRecipe }) {
   return (
-    <div>DashboardPage</div>
+      <div className="main-container">
+      <h1>Recipes Here:</h1>
+      <List recipe={recipe} setRecipe={setRecipe}/> 
+    </div>
   )
 }
 

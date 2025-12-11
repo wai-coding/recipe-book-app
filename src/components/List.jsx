@@ -1,16 +1,7 @@
 import ListItem from "../components/ListItem";
-import { useState } from 'react';
-import recipeData from "../assets/recipe.json";
+import getLabels from "../Utilities/getLabels.js"
 
-function List() {
-  const [recipe, setRecipe] = useState(recipeData);
-
-  function getLabels(calories) {
-    const labels = [];
-    if (calories <= 200) labels.push("Low Calories");
-    if (calories > 200) labels.push("High Calories");
-    return labels;
-  }
+function List({ recipe, setRecipe }) {
 
   function handleDeleteRecipe(id){
     const filteredRecipe = recipe.filter((recipe) => recipe.id !== id);
@@ -22,13 +13,13 @@ function List() {
       {recipe.map((item) => {
         return (
           <ListItem
-            key={item.id}
             recipe={item}
             handleDeleteRecipe={handleDeleteRecipe}
             getLabels={getLabels}
           />
         );
       })}
+      
     </>
   );
 }
