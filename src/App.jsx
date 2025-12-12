@@ -16,7 +16,7 @@ function App() {
  return (
     <>
         <Navbar />
-        <div className="layout">
+        <div className="main-container">
             <Sidebar />   
         <Routes>
             <Route path="/" element={<DashboardPage recipe={recipe} setRecipe={setRecipe}/>} />   

@@ -1,6 +1,7 @@
 body{
   font-family: "Inter", sans-serif;
   margin: 0;
+  color: rgb(46, 46, 46);
 }
 
 .navbar{
@@ -19,11 +20,11 @@ body{
   height: auto;
   margin: 20px;
 }
-.layout {
+.main-container {
   display: flex;
 }
 
-.main-container {
+.item-detail {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -45,10 +46,8 @@ body{
   font-weight: 500;
 }
 
-.home,
-.about,
-.details {
-  display: flex;
+.recipe-container {
+  margin-left: 40px;
 }
 
 .recipe-card {
@@ -58,8 +57,13 @@ body{
   padding: 20px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  /* justify-content: center; */
   margin: 20px auto;
+}
+
+.recipe-card a {
+  text-decoration: none;
+  color: rgb(46, 46, 46);
 }
 
 .recipe-image img{
@@ -79,6 +83,24 @@ body{
   margin: 5px;
 }
 
+.low {
+  background-color: #c8f7c5; 
+  color: #2d7a2d;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-weight: bold;
+  display: inline-block;
+}
+
+.high {
+  background-color: #ffcccc; 
+  color: #b30000;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-weight: bold;
+  display: inline-block;
+}
+
 .btn-delete {
    background-color: #e94b42;
    border: none;
@@ -86,6 +108,11 @@ body{
    color: white;
    padding: 10px;
 }
+
+.about-page{
+  margin-left: 40px;
+}
+
 .footer {
   background-color: #e94b42;
   display: flex;

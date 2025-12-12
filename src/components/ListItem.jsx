@@ -12,7 +12,12 @@ function ListItem({ recipe, handleDeleteRecipe, getLabels }) {
           <p>Name: {recipe.name}</p>
           <div className="labels">
             {getLabels(recipe.calories).map((label) => (
-              <span key={label}>{label} </span>
+              <p 
+                key={label}
+                 className={label === "Low Calories" ? "low" : "high"}
+              >
+                  {label} 
+              </p>
             ))}
           </div>
         </div>

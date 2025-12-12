@@ -11,7 +11,7 @@ function ItemDetailsPage({ recipe }) {
   });
 
   return (
-      <div className="main-container">
+      <div className="item-detail">
 
       <div className="recipe-image">
         <img src={theOneRecipe.image} />
@@ -23,7 +23,12 @@ function ItemDetailsPage({ recipe }) {
         <p>Serving: {theOneRecipe.servings}</p>
         <div className="labels">
           {getLabels(theOneRecipe.calories).map((label) => (
-            <span key={label}>{label} </span>
+            <p 
+              key={label}
+              className={label === "Low Calories" ? "low" : "high"}
+            >
+              {label} 
+            </p>
           ))}
         </div>
         </div>
