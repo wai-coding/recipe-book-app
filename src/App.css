@@ -108,6 +108,14 @@ body{
    color: white;
    padding: 10px;
 }
+.form-add-recipe{
+  display: flex;
+  flex-direction: column;
+}
+
+.capitalized {
+  text-transform: capitalize;
+}
 
 .about-page{
   margin-left: 40px;

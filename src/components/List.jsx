@@ -13,6 +13,7 @@ function List({ recipe, setRecipe }) {
       {recipe.map((item) => {
         return (
           <ListItem
+            key={item.id}
             recipe={item}
             handleDeleteRecipe={handleDeleteRecipe}
             getLabels={getLabels}
