@@ -83,7 +83,7 @@ function EditRecipe({ recipe, setRecipe }) {
                 }}
             />
         </label>
-        <button>Update</button>
+        <button className="btn-update">Update</button>
     </form>
     </div>
   )

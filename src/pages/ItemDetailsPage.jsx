@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import getLabels from "../Utilities/getLabels.js"
 
 function ItemDetailsPage({ recipe }) {
@@ -14,7 +14,7 @@ function ItemDetailsPage({ recipe }) {
       <div className="item-detail">
 
       <div className="recipe-image">
-        <img src={theOneRecipe.image} />
+        <img src={theOneRecipe.image} alt={theOneRecipe.name}/>
       </div>
       
       <div className="theOneRecipe-content">
@@ -32,7 +32,9 @@ function ItemDetailsPage({ recipe }) {
           ))}
         </div>
         </div>
-
+        <Link to="/">
+          <button className="btn-back">Back</button>
+        </Link>
 
     </div>
   )

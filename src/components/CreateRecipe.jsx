@@ -19,61 +19,62 @@ function CreateRecipe({ recipe, setRecipe }) {
     }
 
   return (
-    <div className="form-add-recipe">
-
+    <>
         <h1>Add new Recipe</h1>
-    <form onSubmit={handleFormSubmit}>
-        <label>
-            Recipe name:
-            <input 
-                type="text" 
-                className="capitalized"
-                placeholder="Recipe name" 
-                value={name}
-                onChange={(event) => {
-                    setName(event.target.value);
-                }}
-            />
-        </label>
+        <div className="form-add-recipe">
+        <form onSubmit={handleFormSubmit}>
+            <label>
+                Recipe name:
+                <input 
+                    type="text" 
+                    className="capitalized"
+                    placeholder="Recipe name" 
+                    value={name}
+                    onChange={(event) => {
+                        setName(event.target.value);
+                    }}
+                />
+            </label>
 
-        <label>
-            Recipe Picture: 
-            <input 
-                type="url"
-                placeholder="example@example.com" 
-                value={image}
-                onChange={(event) => {
-                    setImage(event.target.value);
-                }}
-            />
-        </label>
+            <label>
+                Recipe Picture: 
+                <input 
+                    type="url"
+                    placeholder="example@example.com" 
+                    value={image}
+                    onChange={(event) => {
+                        setImage(event.target.value);
+                    }}
+                />
+            </label>
 
-        <label>
-            Calories:
-            <input 
-                type="number"
-                value={calories}
-                min={0}
-                onChange={(event) => {
-                    setCalories(event.target.value);
-                }}
-            />
-        </label>
+            <label>
+                Calories:
+                <input 
+                    type="number"
+                    value={calories}
+                    min={0}
+                    onChange={(event) => {
+                        setCalories(event.target.value);
+                    }}
+                />
+            </label>
 
-        <label>
-            Servings: 
-            <input 
-                type="number"
-                value={servings}
-                min={1}
-                onChange={(event) => {
-                    setServings(event.target.value);
-                }}
-            />
-        </label>
-        <button>Add</button>
-    </form>
-    </div>
+            <label>
+                Servings: 
+                <input 
+                    type="number"
+                    value={servings}
+                    min={1}
+                    onChange={(event) => {
+                        setServings(event.target.value);
+                    }}
+                />
+            </label>
+            <button className="btn-add">Add</button>
+        </form>
+        </div>
+    </>
   )
 }
 export default CreateRecipe

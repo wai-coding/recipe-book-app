@@ -6,7 +6,7 @@ function ListItem({ recipe, handleDeleteRecipe, getLabels }) {
       <div className="recipe-card">
         <Link to={`/details/${recipe.id}`} key={recipe.id}>
         <div className="recipe-image">
-          <img src={recipe.image} />
+          <img src={recipe.image} alt={recipe.name}/>
         </div>
 
         <div className="recipe-content">
@@ -23,20 +23,23 @@ function ListItem({ recipe, handleDeleteRecipe, getLabels }) {
           </div>
         </div>
         </Link>
-        <Link to={`/edit/${recipe.id}`}>
-          <button 
-            className="btn-edit"
-          >
-            Edit
-          </button>
-        </Link>
 
-        <button 
-          className="btn-delete"
-          onClick={() => handleDeleteRecipe(recipe.id)}
-        >
-          Delete
-        </button>
+        <div className="buttons">
+          <Link to={`/edit/${recipe.id}`}>
+            <button 
+              className="btn-edit"
+            >
+              Edit
+            </button>
+          </Link>
+
+          <button 
+            className="btn-delete"
+            onClick={() => handleDeleteRecipe(recipe.id)}
+          >
+            Delete
+          </button>
+        </div>
          
       </div>
      
