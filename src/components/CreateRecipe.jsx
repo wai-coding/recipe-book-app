@@ -20,11 +20,11 @@ function CreateRecipe({ recipe, setRecipe }) {
 
   return (
     <>
-        <h1>Add new Recipe</h1>
+        <h1>Add New Recipe</h1>
         <div className="form-add-recipe">
         <form onSubmit={handleFormSubmit}>
             <label>
-                Recipe name:
+                Recipe Name:
                 <input 
                     type="text" 
                     className="capitalized"
@@ -40,7 +40,7 @@ function CreateRecipe({ recipe, setRecipe }) {
                 Recipe Picture: 
                 <input 
                     type="url"
-                    placeholder="example@example.com" 
+                    placeholder="https://example-url.com" 
                     value={image}
                     onChange={(event) => {
                         setImage(event.target.value);
