@@ -1,4 +1,4 @@
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams, useNavigate, Link } from "react-router-dom";
 import { useState } from "react";
 
 function EditRecipe({ recipe, setRecipe }) {
@@ -31,57 +31,71 @@ function EditRecipe({ recipe, setRecipe }) {
   }
 
   return (
-    <div className="form-add-recipe">
+    <div className="form-edit-recipe">
       <h1>{name} Recipe</h1>
       <form onSubmit={handleUpdateRecipe}>
-        <label>
-          Recipe Name:
-          <input
-            type="text"
-            className="capitalized"
-            placeholder="Recipe name"
-            value={name}
-            onChange={(event) => {
-              setName(event.target.value);
-            }}
-          />
-        </label>
+        <div className="form-content">
+          <div className="form-fields">
+            <label>
+              Recipe Name:
+              <input
+                type="text"
+                className="capitalized"
+                placeholder="Recipe name"
+                value={name}
+                onChange={(event) => {
+                  setName(event.target.value);
+                }}
+              />
+            </label>
 
-        <label>
-          Recipe Picture:
-          <input
-            type="url"
-            value={image}
-            onChange={(event) => {
-              setImage(event.target.value);
-            }}
-          />
-        </label>
-        <img className="current-image" src={image} alt={name} />
-        <label>
-          Calories:
-          <input
-            type="number"
-            value={calories}
-            min={0}
-            onChange={(event) => {
-              setCalories(event.target.value);
-            }}
-          />
-        </label>
+            <label>
+              Recipe Picture:
+              <input
+                type="url"
+                value={image}
+                onChange={(event) => {
+                  setImage(event.target.value);
+                }}
+              />
+            </label>
 
-        <label>
-          Servings:
-          <input
-            type="number"
-            value={servings}
-            min={1}
-            onChange={(event) => {
-              setServings(event.target.value);
-            }}
-          />
-        </label>
-        <button className="btn-update">Update</button>
+            <label>
+              Calories:
+              <input
+                type="number"
+                value={calories}
+                min={0}
+                onChange={(event) => {
+                  setCalories(event.target.value);
+                }}
+              />
+            </label>
+
+            <label>
+              Servings:
+              <input
+                type="number"
+                value={servings}
+                min={1}
+                onChange={(event) => {
+                  setServings(event.target.value);
+                }}
+              />
+            </label>
+          </div>
+
+          <div className="form-img">
+            <img className="preview-image" src={image} alt={name} />
+          </div>
+        </div>
+
+        <div className="buttons">
+          <button className="btn-update">Update</button>
+          <Link to="/">
+            <button className="btn-back">Back</button>
+          </Link>
+        </div>
       </form>
     </div>
   );
