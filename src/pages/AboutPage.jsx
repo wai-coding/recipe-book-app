@@ -1,7 +1,7 @@
 function AboutPage() {
   return (
     <div className="about-page">
-      <h1>About us</h1>
+      <h1>About Us</h1>
       <p>Welcome to the Recipe Book App! We are building a comprehensive and user-friendly platform designed to help home cooks and health-conscious individuals find their next favorite meal.
       Our website goes beyond just providing recipes. For every dish, users can quickly view:</p>
       <ul>
@@ -34,6 +34,7 @@ function AboutPage() {
     <h2>Source Code</h2>
     <p>The full source code for the Recipe Book App is available for review on GitHub:</p>
     <a href="https://github.com/wai-coding/recipe-book-app">Project Repository</a>
+    <p> </p>
     </div>
   )
 }

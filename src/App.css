@@ -51,7 +51,8 @@ h1 {
 }
 
 .recipe-container,
-.item-detail {
+.item-detail,
+.about-page {
   margin-left: 2.5rem;
   flex: 1;
 }
@@ -64,6 +65,7 @@ h1 {
   display: flex;
   align-items: center;
   margin: 1.25rem auto;
+  
 }
 
 .recipe-card a {
@@ -155,10 +157,6 @@ h1 {
   text-transform: capitalize;
 }
 
-.about-page {
-  margin-left: 40px;
-}
-
 .footer {
   background-color: #e94b42;
   display: flex;
@@ -206,5 +204,4 @@ h1 {
 .current-image {
   width: 5rem;
   height: 5rem;
-  
 }
