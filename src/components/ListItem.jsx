@@ -11,7 +11,7 @@ function ListItem({ recipe, handleDeleteRecipe, getLabels }) {
 
       <div className="card-style">
         <div className="recipe-content">
-          <p className="capitalized">Name: {recipe.name}</p>
+          <p className="capitalized">{recipe.name}</p>
           <div className="labels">
             {getLabels(recipe.calories).map((label) => (
               <p

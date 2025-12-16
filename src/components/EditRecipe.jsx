@@ -32,12 +32,12 @@ function EditRecipe({ recipe, setRecipe }) {
 
   return (
     <div className="form-edit-recipe">
-      <h1>{name} Recipe</h1>
+      <h1 className="capitalized">{name} Recipe</h1>
       <form onSubmit={handleUpdateRecipe}>
         <div className="form-content">
           <div className="form-fields">
             <label>
-              Recipe Name:
+              <span>Name:</span>
               <input
                 type="text"
                 className="capitalized"
@@ -50,7 +50,7 @@ function EditRecipe({ recipe, setRecipe }) {
             </label>
 
             <label>
-              Recipe Picture:
+              <span>Picture:</span>
               <input
                 type="url"
                 value={image}
@@ -61,7 +61,7 @@ function EditRecipe({ recipe, setRecipe }) {
             </label>
 
             <label>
-              Calories:
+              <span>Calories:</span>
               <input
                 type="number"
                 value={calories}
@@ -73,7 +73,7 @@ function EditRecipe({ recipe, setRecipe }) {
             </label>
 
             <label>
-              Servings:
+              <span>Servings:</span>
               <input
                 type="number"
                 value={servings}
