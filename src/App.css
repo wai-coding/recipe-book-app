@@ -72,12 +72,11 @@ ul > li {
   gap: 0.05rem;
   overflow-x: auto;
   overflow-y: hidden;
-  padding: 1.25rem;
   flex-wrap: wrap;
 }
 
 .recipe-card {
-  border: 0.125rem solid #e94b42;
+  /* border: 0.125rem solid #e94b42; */
   max-width: 44rem;
   padding: 1.25rem;
   display: flex;
@@ -137,11 +136,15 @@ ul > li {
 
 .buttons {
   max-width: 20rem;
+  display: flex;
 }
 
 .btn-edit,
 .btn-update {
   margin-right: 1rem;
+}
+.btn-add {
+  margin-left: auto;
 }
 
 .btn-delete,
@@ -200,6 +203,11 @@ ul > li {
   border: 0.125rem solid #e94b42;
   padding: 1.25rem;
   margin: 1.25rem auto;
+}
+
+.recipe-title {
+  margin-top: 3rem;
+  margin-bottom: 0;
 }
 
 .form-add-recipe {

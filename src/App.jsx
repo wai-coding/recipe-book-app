@@ -1,36 +1,45 @@
-import './App.css'
-import { useState } from 'react';
-import Navbar from './components/Navbar'
-import DashboardPage from './pages/DashboardPage'
-import Footer from './components/Footer'
-import NotFoundPage from './pages/NotFoundPage'
-import AboutPage from './pages/AboutPage'
-import ItemDetailsPage from './pages/ItemDetailsPage'
-import { Route, Routes } from "react-router-dom"
+import "./App.css";
+import { useState } from "react";
+import Navbar from "./components/Navbar";
+import DashboardPage from "./pages/DashboardPage";
+import Footer from "./components/Footer";
+import NotFoundPage from "./pages/NotFoundPage";
+import AboutPage from "./pages/AboutPage";
+import ItemDetailsPage from "./pages/ItemDetailsPage";
+import { Route, Routes } from "react-router-dom";
 import recipeData from "./assets/recipe.json";
-import Sidebar from "./components/Sidebar"
-import EditRecipe from "./components/EditRecipe"
+import Sidebar from "./components/Sidebar";
+import EditRecipe from "./pages/EditRecipe";
 
 function App() {
-    const [recipe, setRecipe] = useState(recipeData);
+  const [recipe, setRecipe] = useState(recipeData);
 
- return (
+  return (
     <>
-        <Navbar />
-        <div className="main-container">
-            <Sidebar />   
+      <Navbar />
+      <div className="main-container">
+        <Sidebar />
         <Routes>
-            <Route path="/" element={<DashboardPage recipe={recipe} setRecipe={setRecipe}/>} />   
-            <Route path="/about" element={<AboutPage />} /> 
-            <Route path="/details/:recipeId" element={<ItemDetailsPage recipe={recipe}/>} /> 
-            <Route path="/edit/:recipeId" element={<EditRecipe recipe={recipe} setRecipe={setRecipe}/>} /> 
-           
-            <Route path="*" element={<NotFoundPage />} />
+          <Route
+            path="/"
+            element={<DashboardPage recipe={recipe} setRecipe={setRecipe} />}
+          />
+          <Route path="/about" element={<AboutPage />} />
+          <Route
+            path="/details/:recipeId"
+            element={<ItemDetailsPage recipe={recipe} />}
+          />
+          <Route
+            path="/edit/:recipeId"
+            element={<EditRecipe recipe={recipe} setRecipe={setRecipe} />}
+          />
+
+          <Route path="*" element={<NotFoundPage />} />
         </Routes>
-        </div>
-        <Footer />
-
+      </div>
+      <Footer />
     </>
-)}
+  );
+}
 
-export default App
+export default App;
